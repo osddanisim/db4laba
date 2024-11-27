@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggregate</title>
+</head>
+<body>
+    <h1>User Order Count</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.name }}: {{ user.order_count }} orders</li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Return to Home</button></a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eager Loading</title>
+</head>
+<body>
+    <h1>Eager Loading</h1>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.name }}:
+                <ul>
+                    {% for car in user.cars.all %}
+                        <li>{{car.brand}} {{car.model}}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Return to Home</button></a>
+</body>
+</html>

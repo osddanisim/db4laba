@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Orders</title>
+</head>
+<body>
+    <h1>Completed Orders</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.id }}: {{ order.order_status }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Return to Home</button></a>
+</body>
+</html>
